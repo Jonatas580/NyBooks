@@ -1,14 +1,24 @@
 package com.jonatas.nybooks
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import kotlinx.android.synthetic.main.activity_books.*
+import androidx.appcompat.app.AppCompatActivity
+import com.jonatas.nybooks.databinding.ActivityBooksBinding
+
 
 class BooksActivity : AppCompatActivity() {
+
+
+
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_books)
+        val binding = ActivityBooksBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        toolbarMain
+        setup
+
     }
+
+
 }
