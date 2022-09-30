@@ -26,14 +26,4 @@ class BooksActivity : AppCompatActivity() {
             adapter = BooksAdapter(getBooks())
         }
     }
-
-    fun getBooks(): List<Book> {
-        return listOf<Book>(
-            Book("Title1", "Aythor1"),
-            Book("Title2", "Aythor2"),
-            Book("Title3", "Aythor3")
-        )
-    }
-
-
 }
