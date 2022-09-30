@@ -7,7 +7,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.jonatas.nybooks.data.model.Book
 import com.jonatas.nybooks.databinding.ActivityBooksBinding
 import com.jonatas.nybooks.presentation.BooksAdapter
-import com.jonatas.nybooks.presentation.base.BaseActivity
 
 
 class BooksActivity : AppCompatActivity() {
@@ -25,5 +24,14 @@ class BooksActivity : AppCompatActivity() {
             setHasFixedSize(true)
             adapter = BooksAdapter(getBooks())
         }
+    }
+
+    fun getBooks(): List<Book> {
+        return listOf<Book>(
+            Book("Title1", "Author1"),
+            Book("Title2", "Author2"),
+            Book("Title3", "Author3")
+        )
+
     }
 }
