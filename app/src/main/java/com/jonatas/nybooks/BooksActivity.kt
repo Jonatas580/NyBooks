@@ -1,16 +1,29 @@
 package com.jonatas.nybooks
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import kotlinx.android.synthetic.main.activity_books.*
+import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.jonatas.nybooks.data.model.Book
+import com.jonatas.nybooks.databinding.ActivityBooksBinding
+import com.jonatas.nybooks.presentation.BooksAdapter
+import com.jonatas.nybooks.presentation.base.BaseActivity
+
 
 class BooksActivity : AppCompatActivity() {
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_books)
+        val binding = ActivityBooksBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        val toolbarMain = pacaTt
 
 
+        with(binding.recyclerBooks) {
+            layoutManager = LinearLayoutManager(this@BooksActivity, RecyclerView.VERTICAL, false)
+            setHasFixedSize(true)
+            adapter = BooksAdapter(getBooks())
+        }
     }
 }
