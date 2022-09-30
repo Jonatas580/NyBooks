@@ -6,10 +6,7 @@ import com.jonatas.nybooks.databinding.ActivityBooksBinding
 import com.jonatas.nybooks.presentation.base.BaseActivity
 
 
-class BooksActivity : BaseActivity() {
-
-
-
+class BooksActivity : AppCompatActivity() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,7 +14,7 @@ class BooksActivity : BaseActivity() {
         val binding = ActivityBooksBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        setupToolbar(binding.includeToolbar.toolbarMain, R.string.boo)
+//        val teste = (binding.toolbarMain( R.string.books_title)
 
     }
 
