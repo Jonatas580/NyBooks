@@ -17,8 +17,6 @@ class BooksActivity : AppCompatActivity() {
         val binding = ActivityBooksBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
-
         with(binding.recyclerBooks) {
             layoutManager = LinearLayoutManager(this@BooksActivity, RecyclerView.VERTICAL, false)
             setHasFixedSize(true)

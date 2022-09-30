@@ -4,5 +4,5 @@
 
 
     <!--    Books Activity-->
-    <string name="books_title">Books</string>
+    <string name="books_title_tool_bar">Books</string>
 </resources>
